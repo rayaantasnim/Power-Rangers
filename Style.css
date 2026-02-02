@@ -52,6 +52,14 @@ h6{
 	text-align: center;
 }
 
+.min{
+	font-size:50px;
+	background-color: lightgreen;
+	color: black;
+	text-align: center;
+	font-family:Algerian;
+}
+
 p{
 	font-size: 20px;
 	background-color: white;
@@ -106,3 +114,4 @@ h1{
 	}
 
 }
+
