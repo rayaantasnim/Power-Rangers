@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IDAI Power Rangers: Roar of Responsibility</title>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>	
+</head>
+
+
+<body class="bg-info-subtle">
+  <audio id="bgMusic" autoplay loop muted>
+    <source src="Song.mp3" type="audio/mpeg">
+  </audio>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🌐IDAI Power Rangers</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link special" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="tower.html">Headquarters</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Members</a> </li>
+          <li class="nav-item"><a class="nav-link" href="zords.html">Zords</a></li> 
+          <li class="nav-item"><a class="nav-link" href="super.html">Super Force</a></li>
+          <li class="nav-item"> <a class="nav-link" href="Weapon.html">Weapons</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div id="para">
+	<h1>IDAI Power Rangers: Roar of Responsibility</h1>
+	<h2>The Motto: “The Responsibility We Bear Is Great”</h2>
+	<center>
+		<img src="Logo.jpg">
+	</center>
+	<p>
+		The IDAI Power Rangers are the supreme defenders of the IDAI Sovereign State, forged under the Weapons Sector and empowered by the Morphex Tower on Neptune. They embody the Roaring Lion emblem, a symbol of courage, honor, and eternal vigilance, channeling cosmic energy from Proxima Centauri through their Power Stars to transform from ordinary humans into legendary warriors. Each Ranger represents a distinct virtue: Red stands for speed and leadership, Yellow for loyalty and light, Blue for vision and strategy, Pink for compassion and seismic force, Gold for supremacy and cosmic flame, and Steel for defense and technological might. Together, they wield the IDAI Roaring Cannon, a ceremonial weapon that amplifies their powers and unites their strength in battle. Bound by the motto “The Responsibility We Bear Is Great,” they fight not only to protect humanity but also to uphold the dignity and supremacy of IDAI across the cosmos.
+	</p></div>
+
+<div class="section">
+  <h3>Controled By: IDAI Philanthropy Sector</h3>
+    <center>
+        <img src="Ministry Sector.jpg">
+    </center>
+
+    <p>
+        The IDAI Power Rangers operate under the IDAI Philanthropy Sector as a humanitarian guardian force dedicated to protecting lives, supporting global relief operations, and ensuring peace through advanced technology and responsible leadership. Rather than serving as a military organization, they respond to natural disasters, humanitarian crises, rescue missions, medical emergencies, and large-scale security threats while always placing human dignity at the center of every decision. Equipped with futuristic equipment, intelligent vehicles, and powerful guardian systems, the team works alongside scientists, engineers, healthcare professionals, and volunteers to deliver hope, stability, and rapid assistance wherever it is needed.
+        <br><br>
+        Guided by the values of compassion, innovation, and stewardship, the IDAI Power Rangers represent the commitment of the IDAI Philanthropy Sector to safeguard humanity without seeking conflict or domination. Their headquarters coordinates global emergency responses using artificial intelligence, autonomous rescue technologies, and advanced communication networks that enable immediate action across land, sea, air, and space. Every ranger is trained to protect civilians, preserve the environment, and inspire future generations through courage, discipline, and selfless service. Together, they stand as trusted guardians of humanity, demonstrating that true strength is measured by the ability to protect, serve, and uplift every community.
+    </p>
+</div>
+
+	<div class="section">
+	<h2>Lion Emblem Power Chest: Roaring Heart of Supremacy</h2>
+	<center>
+		<img src="Final.jpg">
+	</center>
+	<p>
+		The Lion Emblem Power Chest is the sacred core of the IDAI Power Rangers, engraved with the Roaring Lion symbol that embodies courage, honor, and eternal supremacy. Positioned at the center of each Ranger’s armor, it is more than decoration—it is the living conduit of cosmic energy from Proxima Centauri, fused with advanced AI technology. When activated, the emblem glows with radiant light, resonating with the Ranger’s Power Star to amplify their strength, resilience, and philanthropic mission. The roar of the Lion within the chest symbolizes dignity and unity, reminding every Ranger that their power is not for conquest but for humanity’s survival. It channels protective waves, shields allies, and ignites hope in communities, serving as the eternal heartbeat of IDAI. The Lion Emblem Power Chest is the living reminder that legends never die, and that true supremacy lies in service, compassion, and the guardianship of humanity.
+	</p></div>
+
+	<div class="section">
+		<h3>Guardians of Humanity: The Eternal Supremacy of IDAI Power Rangers</h3>
+	<center>
+		<img src="Super Force.jpg">
+	</center>
+	<p>
+		The IDAI Power Rangers are the greatest in serving humanity because their power is never used for destruction but for protection, dignity, and spreading hope. Each of their weapons, such as the Atomic Beast Blaster, Cosmic Roar Blaster, Lion Flare Blaster, and Roaring Cannon, is powered by cosmic energy drawn from Proxima Centauri, designed not only to defeat enemies but also to shield the weak, light up the darkness, and inspire unity. The six Rangers embody different virtues—courage, loyalty, wisdom, compassion, resilience, and supremacy—and when combined, they form an unbreakable force dedicated to humanity’s survival. Their Zord Stars and the supreme Megazord Star act as living hearts, channeling not just energy but responsibility, reminding them that true strength lies in service. Every battle they fight is for the preservation of human dignity, every victory is for hope, and every weapon is a symbol of guardianship. Their oath, “Protect Humanity, Honor IDAI, Legends Never Die,” reflects their eternal mission. By dedicating themselves fully to the welfare of humanity, the IDAI Power Rangers prove that those who serve selflessly are the true guardians of mankind, making them the supreme protectors and eternal champions of human service.  
+	</p></div>
+
+	<center>
+		<h6>Powered By</h6>
+		<a href="https://rayaantasnim.github.io/username.github.io-IDAI-company-/"><img src="Main Logo.jpg"></a>
+	</center>
+
+<footer>
+	<p>© IDAI: Inspiring Trust Through Innovation. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    window.addEventListener("click", () => {
+      const audio = document.getElementById("bgMusic");
+      audio.muted = false;
+      audio.play();
+    }, { once: true });
+  </script>
+
+
+</body>
+</html>

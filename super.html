@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IDAI Power Rangers - Headquarters and Infrastrustures</title>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>	
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🌐IDAI Power Rangers</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="tower.html">Headquarters</a></li>
+          <li class="nav-item"><a class="nav-link " href="members.html">Members</a> </li>
+          <li class="nav-item"><a class="nav-link" href="zords.html">Zords</a></li> 
+          <li class="nav-item"><a class="nav-link special" href="super.html">Super Force</a></li>
+          <li class="nav-item"> <a class="nav-link" href="Weapon.html">Weapons</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<h3>IDAI Super Mega-Force</h3>
+<div class="section">
+    <center>
+        <img src="IDAI Rangers Team.jpg" alt="IDAI Super Mega-Force">
+    </center>
+
+    <p>
+        The <strong>IDAI Super Mega-Force</strong> represents the highest combat evolution of the IDAI Power Rangers. Whenever humanity faces an extraordinary threat beyond the capabilities of their standard Ranger forms, the entire team activates the legendary <strong>Super Mega-Force</strong> transformation. Powered by the Super Mega Force Power Star, each Ranger's self-healing suit is enhanced with vastly greater strength, speed, endurance, intelligence, and energy output. Every weapon, defensive system, and combat ability is elevated to an entirely new level, allowing the team to confront enemies of unprecedented power while remaining united as the Guardians of Humanity.<br><br>
+
+        The Super Mega-Force is more than a transformation—it is the ultimate symbol of courage, unity, and responsibility. Guided by the Cragnon Command Nexus, the Rangers synchronize their energy into a single battle network, enabling flawless teamwork in the most critical missions. Whether protecting innocent lives, defending the IDAI Universe, or leading the Super Mega Zords into battle, the Super Mega-Force stands as humanity's final shield against any force that threatens peace, justice, and hope.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Super Mega-Force Power Star</h3>
+
+    <center>
+        <img src="Super Power Star for super mega force.jpg" alt="Super Mega-Force Power Star">
+    </center>
+
+    <p>
+        The <strong>Super Mega-Force Power Star</strong> is the legendary energy core that unlocks the ultimate transformation of the IDAI Power Rangers. Secured inside a heavily fortified glass capsule within the IDAI Power Rangers Headquarters, this extraordinary artifact stores an immense concentration of clean quantum energy. When the Rangers face threats beyond the capabilities of their standard forms, the Power Star synchronizes with every Ranger simultaneously, initiating the Super Mega-Force transformation and elevating their strength, speed, intelligence, endurance, and combat systems to unprecedented levels.<br><br>
+
+        More than a simple power source, the Super Mega-Force Power Star symbolizes the unity and determination of the Guardians of Humanity. Every activation is carefully authorized by the Cragnon Command Nexus, ensuring its immense energy is used only when the future of humanity is at stake. Once awakened, the Power Star empowers the entire team to stand together as the legendary <strong>IDAI Super Mega-Force</strong>, ready to confront the greatest challenges with unmatched courage, advanced technology, and unwavering hope.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Super Power Chest Core (Chest Emblem)</h3>
+
+    <center>
+        <img src="Chest logo.jpg" alt="Super Power Chest Core (Chest Emblem)">
+    </center>
+
+    <p>
+        The <strong>Super Power Chest Core</strong> is the central energy system of the IDAI Super Mega-Force armor, embedded directly into the chest of every Ranger. Acting as the heart of the suit, this advanced quantum reactor continuously distributes clean energy throughout the armor, powering the Rangers' enhanced strength, speed, defense, flight systems, tactical sensors, and combat equipment. The illuminated <strong>IDAI</strong> emblem represents the unwavering commitment of the Guardians of Humanity to protect peace through innovation and courage.
+
+        <br><br>
+
+        Beyond serving as an energy source, the Super Power Chest Core functions as an intelligent command interface connected to the <strong>Cragnon Command Nexus</strong>. It synchronizes every Ranger with the team's communication network, monitors battlefield conditions in real time, regulates the Self-Healing Super Suit, and manages power distribution during combat. When operating at maximum capacity, the Chest Core becomes the foundation of the Super Mega-Force system, enabling every Ranger to perform at extraordinary levels while maintaining perfect coordination with the entire team.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Super Ray Gun (Integrated Arm Cannon)</h3>
+
+    <center>
+        <img src="Ray Gun.jpg" alt="Super Ray Gun (Integrated Arm Cannon)">
+    </center>
+
+    <p>
+        The <strong>Super Ray Gun</strong> is the primary ranged weapon of the IDAI Super Mega-Force, seamlessly integrated into the Rangers' forearm armor for instant deployment during combat. Powered directly by the Super Power Chest Core, this advanced arm cannon generates highly concentrated quantum energy beams capable of neutralizing hostile targets with exceptional speed, precision, and efficiency. Its intelligent targeting system continuously analyzes enemy movement, allowing every shot to maintain remarkable accuracy even in the most intense battlefield conditions.
+
+        <br><br>
+
+        Designed for maximum versatility, the Super Ray Gun supports multiple combat modes, including precision pulse shots, rapid-fire bursts, sustained energy beams, electromagnetic suppression, and high-powered finishing attacks. Connected to the <strong>Cragnon Command Nexus</strong>, the weapon automatically adjusts its power output based on mission requirements while preventing unnecessary collateral damage. As an essential component of the Super Mega-Force arsenal, the Integrated Arm Cannon enables every IDAI Ranger to engage threats from close quarters to long-range operations with unmatched technological superiority.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Super Red Ranger</h3>
+
+    <center>
+        <img src="Super Red Ranger.jpg" alt="Super Red Ranger">
+    </center>
+
+    <p>
+        The Super Red Ranger is the commander of the IDAI Super Mega-Force and the symbol of courage, leadership, and unwavering responsibility. After synchronizing with the Super Mega-Force Power Star, the Red Ranger enters an enhanced combat form that dramatically increases strength, speed, endurance, intelligence, and tactical awareness. Powered by the Self-Healing Super Suit and the Super Power Chest Core, every system operates at maximum efficiency, allowing the leader to make rapid decisions while protecting both teammates and innocent lives in the most demanding situations.<br><br>
+
+        As the battlefield leader, the Super Red Ranger coordinates every operation through direct communication with the Cragnon Command Nexus and commands the entire Super Mega-Force during global emergency missions. The Ranger is entrusted with activating advanced combat systems, leading synchronized team attacks, and piloting the legendary Super Red Panther Zord during large-scale engagements. Through discipline, unity, and advanced technology, the Super Red Ranger stands at the forefront of the Guardians of Humanity, inspiring the entire team to overcome every challenge with courage, precision, and hope.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Super Red Ranger Zord – Red Panther</h3>
+
+    <center>
+        <img src="Super Red Ranger Zord - Red Panther.jpg" alt="Super Red Ranger Zord – Red Panther">
+    </center>
+
+    <p>
+        The Super Red Panther is the signature Super Zord of the Red Ranger and serves as the primary combat unit of the IDAI Super Mega-Force. Engineered for overwhelming strength, unmatched agility, and lightning-fast assault capabilities, this advanced robotic panther combines the instincts of a powerful predator with cutting-edge artificial intelligence. Its reinforced armor, high-output energy core, and adaptive combat systems enable it to dominate the battlefield while protecting civilians during the most dangerous humanitarian operations.<br><br>
+
+        Operating in complete synchronization with the Red Ranger through the Super Power Chest Core, the Red Panther responds instantly to every command with remarkable precision. It is equipped with powerful energy claws, enhanced mobility thrusters, advanced battlefield sensors, and self-repair technologies that allow it to continue fighting under extreme conditions. When the situation demands even greater power, the Super Red Panther becomes the central component in forming the legendary IDAI Super Mega Zord, combining its strength with the remaining Super Zords to defend humanity against the greatest global threats.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Super Mega Zord</h3>
+
+    <center>
+        <img src="Super Mega Zord.jpg" alt="Super Mega Zord">
+    </center>
+
+    <p>
+        The Super Mega Zord is the ultimate guardian machine of the IDAI Super Mega-Force, formed by combining the six Super Zords into a single colossal combat system. Every component contributes its unique strengths, creating a unified machine with extraordinary power, intelligence, resilience, and adaptability. Guided by the Red Ranger and synchronized through the Super Mega-Force network, the Mega Zord is deployed only during the most critical missions when ordinary combat capabilities are no longer sufficient to protect humanity from catastrophic threats.<br><br>
+
+        At its core, the Super Mega Zord is powered by the legendary Super Mega Zords Power Star, allowing every subsystem to operate in perfect harmony under the supervision of the Cragnon Command Nexus. Its arsenal includes overwhelming defensive armor, precision energy weapons, advanced flight capabilities, adaptive battlefield intelligence, and self-repair technologies that enable prolonged operations under extreme conditions. As the greatest creation of the IDAI Power Rangers, the Super Mega Zord represents the unity, courage, and technological excellence of the Guardians of Humanity, standing as the final line of defense whenever the future of civilization is at stake.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Super Mega Zords Power Star</h3>
+
+    <center>
+        <img src="Super Power Star for super mega force.jpg" alt="Super Mega Zords Power Star">
+    </center>
+
+    <p>
+        The Super Mega Zords Power Star is the legendary energy core of the IDAI Super Mega-Force, serving as the primary source of power that connects and synchronizes all Super Zords into a unified combat system. Created with advanced quantum energy technology, the Power Star provides extraordinary energy output, allowing the Super Mega Zord and its individual components to achieve maximum performance during the most challenging missions. It represents the heart of the Mega-Force, carrying the combined strength, intelligence, and determination of the Guardians of Humanity.<br><br>
+
+        Integrated with the Cragnon Command Nexus, the Super Mega Zords Power Star enables perfect coordination between every Zord system, enhancing power distribution, defensive capabilities, weapon control, and adaptive battlefield response. Only activated under critical circumstances, this legendary power source unlocks the full potential of the Super Mega Zords, symbolizing unity, courage, innovation, and the endless commitment of the IDAI Power Rangers to protect civilization and the future of humanity.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Nightshade Urban Assault Interceptor</h3>
+
+    <center>
+        <img src="Nightshade Urban Assault Interceptor.jpg" alt="Nightshade Urban Assault Interceptor">
+    </center>
+
+    <p>
+        The Nightshade Urban Assault Interceptor is a high-speed armored vehicle engineered for rapid deployment in dense city environments. With its matte black exterior, angular combat-ready design, and reinforced heavy-duty tires, the Interceptor combines stealth with overwhelming power. Bright LED headlights and roof lights ensure visibility during night operations, while its advanced suspension system allows seamless maneuvering across urban terrain.<br><br>
+
+        As part of the IDAI Super Mega-Force arsenal, the Nightshade Interceptor functions as both a frontline assault unit and a humanitarian rescue transport. Its adaptive combat systems, reinforced armor plating, and integrated tactical sensors make it indispensable during urban crises. Whether neutralizing threats or protecting civilians, the Nightshade embodies the Guardians of Humanity’s mission to defend peace, justice, and hope with speed and precision.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Steel Vanguard Half-Track Recon Carrier – All-Terrain Super Track</h3>
+
+    <center>
+        <img src="Steel Vanguard Half-Track Recon Carrier.webp" alt="Steel Vanguard Half-Track Recon Carrier – All-Terrain Super Track">
+    </center>
+
+    <p>
+        The Steel Vanguard Half-Track Recon Carrier is a rugged all-terrain vehicle designed to operate in the harshest environments. With its unique half-track design combining wheeled agility and tracked stability, it excels in snow, mud, and uneven terrain while maintaining speed and maneuverability. Equipped with reinforced armor, mounted weaponry, and advanced reconnaissance sensors, the Vanguard ensures both offensive capability and defensive resilience.<br><br>
+
+        As part of the IDAI Super Mega-Force arsenal, the Steel Vanguard serves as a mobile command and recon platform, capable of transporting Rangers and critical equipment into hostile zones. Its adaptive systems, heavy-duty engineering, and battlefield intelligence integration make it indispensable for missions requiring endurance and versatility. Whether navigating frozen landscapes or urban battlegrounds, the Vanguard embodies the Guardians of Humanity’s strength, precision, and commitment to protecting civilization.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Wraith Urban – Super All-Terrain Armored Transport Truck</h3>
+
+    <center>
+        <img src="Wraith Urban.jpg" alt="Wraith Urban – Super All-Terrain Armored Transport Truck">
+    </center>
+
+    <p>
+        The Wraith Urban is a futuristic armored transport truck engineered for maximum endurance and versatility in hostile environments. With its angular design, reinforced armor plating, and advanced suspension system, the Wraith combines raw power with sleek technological sophistication. Its illuminated accents and multi-wheel configuration allow it to dominate both urban battlegrounds and rugged terrain with unmatched stability and speed.<br><br>
+
+        As part of the IDAI Super Mega-Force arsenal, the Wraith Urban serves as a heavy-duty transport and combat support vehicle. Equipped with adaptive battlefield sensors, secure deployment bays, and integrated defensive systems, it ensures the safe movement of Rangers and critical supplies during high-risk missions. Whether navigating futuristic cityscapes or extreme landscapes, the Wraith embodies the Guardians of Humanity’s mission to protect civilization with strength, precision, and unwavering resilience.
+    </p>
+</div>
+
+<div class="section">
+    <h3>IDAI Shadow Wing – Stealth Tactical Jet</h3>
+
+    <center>
+        <img src="Jet - IDAI Shadow wing.webp" alt="IDAI Shadow Wing – Stealth Tactical Jet">
+    </center>
+
+    <p>
+        The IDAI Shadow Wing is the primary aerial support and rapid-response aircraft assigned to the IDAI Super Mega-Force. Designed with advanced stealth technology, the jet can penetrate hostile airspace while remaining extremely difficult to detect by conventional radar and tracking systems. Its powerful engines deliver exceptional speed, long-range endurance, and agile maneuverability, allowing the Rangers to deploy anywhere in the world within minutes whenever humanity faces a critical threat.<br><br>
+
+        Beyond transportation, the Shadow Wing functions as a fully integrated tactical command platform. It is equipped with AI-assisted navigation, encrypted communications, precision defensive systems, and secure deployment bays for Super Mega-Force equipment and mission support. Connected directly to the Cragnon Command Nexus, the aircraft provides continuous battlefield intelligence, ensuring the Guardians of Humanity maintain complete aerial superiority while protecting civilians with speed, precision, and unwavering reliability.
+    </p>
+</div>
+
+<footer>
+	<p>© IDAI: Inspiring Trust Through Innovation. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

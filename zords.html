@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IDAI Power Rangers - Headquarters and Infrastrustures</title>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>	
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🌐IDAI Power Rangers</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="tower.html">Headquarters</a></li>
+          <li class="nav-item"><a class="nav-link " href="members.html">Members</a> </li>
+          <li class="nav-item"><a class="nav-link special" href="zords.html">Zords</a></li> 
+          <li class="nav-item"><a class="nav-link" href="super.html">Super Force</a></li>
+          <li class="nav-item"> <a class="nav-link" href="Weapon.html">Weapons</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<h2>IDAI Power Rangers Zords: Cosmic Beast Guardians</h2>
+
+  <div class="section">
+  <h3>IDAI Power Rangers Zords: Always Ready to operate</h3>
+  <center>
+    <img src="All the Zords.jpg">
+  </center>
+  <p>
+    The IDAI Power Rangers Zords are colossal mechanical guardians forged in the Morphex Tower and infused with cosmic energy from Proxima Centauri, each representing the spirit of an animal or machine while embodying the essence of their Ranger. The Red Panther Zord strikes with agility and courage, moving swiftly across battlefields to protect allies. The Yellow Lioness Zord radiates loyalty and resilience, roaring with protective strength to shield communities. The Blue Eagle Zord soars high with wings of wisdom and foresight, scanning the skies and guiding missions with clarity. The Pink Rhino Zord charges forward with compassion and balance, using its immense power to break barriers and restore harmony. The Gold Unicorn Zord shines with brilliance and supremacy, illuminating paths of progress and inspiring hope. The Steel Tank Zord fortifies defenses with innovation and durability, standing as an unbreakable wall against threats. Together, these Zords unite into the Atomic Beast Bluster, a supreme Megazord engraved with the Roaring Lion emblem, channeling cosmic energy into protective waves that safeguard humanity’s dignity and eternal supremacy.
+  </p>
+
+  <h3>Zord Stars: Cosmic Hearts of Supremacy</h3>
+  <center>
+    <img src="Stars.jpg">
+  </center>
+  <p>
+    The Zord Stars are radiant emblems forged in the Morphex Tower, each infused with cosmic energy from Proxima Centauri and engraved with the Roaring Lion symbol to embody courage, honor, and eternal supremacy. They serve as the living hearts of the colossal Zords, channeling their essence into light and power. The Red Panther Star glows crimson with agility and courage, the Yellow Lioness Star shines golden with loyalty and resilience, the Blue Eagle Star radiates azure brilliance with wisdom and foresight, the Pink Rhino Star pulses with soft pink compassion and strength, the Gold Unicorn Star gleams supreme with brilliance and hope, and the Steel Tank Star glows silver-gray with resilience and innovation. When united, these six Zord Stars converge into a single burst of cosmic light, forming the supreme Megazord Star that amplifies their collective strength. More than weapons, they are symbols of unity and guardianship, ensuring IDAI’s mission of dignity and humanity endures eternally.
+  </p></div>
+
+<div class="section">
+  <h3>The Red Ranger Panther Zord </h3>
+    <center>
+        <img src="Red Ranger Panther Zord.jpg">
+    </center>
+
+    <p>
+        The Red Ranger Panther Zord is the official guardian machine assigned exclusively to the Red Ranger, serving as the symbol of leadership, courage, and unwavering responsibility within the IDAI Power Rangers. Inspired by the agility and strength of a panther, this advanced combat and rescue platform combines extraordinary speed with exceptional precision, allowing it to navigate complex environments across land, mountains, urban areas, and hostile terrain. Powered by an advanced quantum energy core and guided by intelligent autonomous systems, the Panther Zord supports humanitarian operations, emergency response missions, and planetary defense while maintaining complete synchronization with its Red Ranger pilot.
+        <br><br>
+        Constructed using ultra-durable futuristic alloys and next-generation artificial intelligence, the Red Ranger Panther Zord features adaptive armor, enhanced mobility systems, powerful sensor arrays, and high-capacity energy reserves for extended missions. Its sophisticated command interface enables seamless coordination with the other Guardian Zords, allowing them to unite into the legendary IDAI Super Mega-Zord whenever extraordinary challenges arise. Beyond its remarkable technological capabilities, the Panther Zord represents the spirit of noble leadership, discipline, and selfless service, reminding every Power Ranger that true power exists to protect humanity, preserve peace, and inspire hope for future generations.
+    </p>
+</div>
+
+<div class="section">
+    <h3> Blue Ranger Leopard Zord </h3>
+    <center>
+        <img src="Blue Ranger - Leopard Zord.jpg">
+    </center>
+
+    <p>
+        The Blue Ranger Leopard Zord is the official guardian machine assigned to the Blue Ranger, representing intelligence, precision, adaptability, and exceptional speed. Inspired by the remarkable agility and awareness of a leopard, this advanced Zord is engineered for reconnaissance, rapid deployment, rescue coordination, and tactical support across diverse environments. Its high-performance mobility system enables swift movement through forests, mountains, urban landscapes, deserts, and other challenging terrain while maintaining outstanding stability and control. Equipped with a quantum-powered energy core and intelligent navigation systems, the Leopard Zord assists the Blue Ranger in protecting civilians and completing missions with remarkable efficiency and reliability.
+        <br><br>
+        Built using next-generation composite alloys and sophisticated artificial intelligence, the Blue Ranger Leopard Zord features adaptive armor, advanced environmental sensors, long-range communication equipment, and autonomous decision-support capabilities that enhance every humanitarian and security operation. Its seamless compatibility with the other Guardian Zords allows it to combine into the legendary IDAI Super Mega-Zord whenever extraordinary circumstances demand the united strength of the entire ranger team. Beyond its technological excellence, the Leopard Zord symbolizes wisdom, discipline, teamwork, and strategic thinking, inspiring every guardian to serve humanity with responsibility, innovation, courage, and an unwavering commitment to peace.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Yellow Ranger Wolf Zord</h3>
+
+    <center>
+        <img src="Yellow Ranger Wolf Zord.jpg">
+    </center>
+
+    <p>
+        The Yellow Ranger Wolf Zord is the fastest aerial Guardian Zord in the IDAI Power Rangers fleet, combining the instincts of a wolf with the freedom of flight. Equipped with advanced mechanical wings and powered by a Proxima Centauri quantum energy core, it can soar above futuristic cities, oceans, mountains, and remote landscapes with remarkable speed and precision. Its lightweight yet resilient armor, intelligent navigation system, and agile maneuverability allow the Yellow Ranger to respond rapidly to emergencies while maintaining complete control in both atmospheric and high-altitude missions.
+        <br><br>
+        Coordinated by the Cragnon Command Nexus, the Wolf Zord serves as an essential guardian for reconnaissance, rapid deployment, humanitarian support, and aerial protection. Its adaptive flight systems and AI-assisted sensors continuously monitor the surrounding environment, ensuring every mission is carried out safely and efficiently. When greater strength is required, the Wolf Zord synchronizes seamlessly with the Panther, Leopard, Rhino, Unicorn, Tank, and Dragon Zords to help form the legendary Dragon Mega-Zord, demonstrating the unity and technological excellence of the IDAI Power Rangers.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Gold Ranger Unicorn Zord</h3>
+
+    <center>
+        <img src="Gold Ranger - Unicorn Zord.jpg">
+    </center>
+
+    <p>
+        The Gold Ranger Unicorn Zord is the symbol of hope, compassion, and unwavering guardianship within the IDAI Power Rangers. Inspired by the legendary unicorn, this advanced Guardian Zord combines graceful flight with extraordinary strength, enabling it to protect civilians during emergencies and humanitarian missions. Its radiant golden armor, intelligent support systems, and precision mobility allow the Gold Ranger to reach disaster zones quickly, providing assistance while ensuring the highest level of safety for those in need.
+        <br><br>
+        Operating under the guidance of the Cragnon Command Nexus, the Unicorn Zord is equipped with advanced quantum technology, adaptive defensive armor, and clean Proxima Centauri energy systems for continuous operation. Beyond its remarkable engineering, it serves as a reassuring presence that inspires confidence wherever it appears. Whether conducting rescue operations, delivering humanitarian aid, or joining the Panther, Leopard, Rhino, Wolf, Tank, and Dragon Zords in larger missions, the Unicorn Zord reflects the IDAI Power Rangers' enduring commitment to protecting humanity through courage, innovation, and compassion.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Pink Ranger Rhino Zord</h3>
+
+    <center>
+        <img src="Pink Ranger - Rhino Zord.jpg">
+    </center>
+
+    <p>
+        The Pink Ranger Rhino Zord is the defensive powerhouse of the IDAI Power Rangers, engineered to protect lives with exceptional resilience and unwavering determination. Inspired by the mighty rhinoceros, this Guardian Zord features reinforced quantum armor, immense physical strength, and remarkable stability, allowing it to operate safely in urban environments, disaster zones, and challenging terrain. Its powerful charging capability and precision control enable the Pink Ranger to clear debris, create safe evacuation routes, and shield civilians from danger while maintaining the highest standards of humanitarian protection.
+        <br><br>
+        Guided by the Cragnon Command Nexus, the Rhino Zord utilizes advanced AI systems, clean Proxima Centauri energy, and intelligent environmental sensors to support emergency response missions with outstanding efficiency. Built to endure the most demanding conditions, it serves as a symbol of courage, compassion, and reliability. Whenever greater strength is required, the Rhino Zord synchronizes seamlessly with the Panther, Leopard, Wolf, Unicorn, Tank, and Dragon Zords to help form the legendary Dragon Mega-Zord, reinforcing the united mission of the IDAI Power Rangers to safeguard humanity.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Grey Ranger - Tank Zord</h3>
+
+    <center>
+        <img src="Grey Ranger - Tank Zord.jpg" alt="Grey Ranger Tank Zord">
+    </center>
+
+    <p>
+        The <strong>Grey Ranger Tank Zord</strong> is the ultimate heavy assault and defensive machine of the IDAI Power Rangers. Designed to withstand overwhelming enemy attacks, this armored guardian combines the resilience of a battle tank with the mobility of a powerful mechanical beast. Its reinforced alloy plating, advanced missile systems, high-energy plasma cannon, and adaptive defense shields allow it to secure strategic locations while protecting both civilians and fellow Rangers during the most dangerous missions.<br><br>
+
+        Controlled through the Cragnon Command Nexus, the Tank Zord specializes in frontline combat, disaster containment, and fortress defense. Its precision targeting system can neutralize large threats while minimizing damage to surrounding infrastructure. When combined with the other Ranger Zords, it forms the armored foundation of the legendary Dragon Mega Zord, providing unmatched stability, firepower, and protection in humanity's greatest battles.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Rangers Special Off-Road Vehicle</h3>
+
+    <center>
+        <img src="Rangers Special Off-road vehicle.jpg">
+    </center>
+
+    <p>
+        The Rangers Special Off-Road Vehicle is the primary rapid-response transport of the IDAI Power Rangers, engineered for speed, stability, and versatility across every environment. Whether navigating futuristic city streets, rugged mountain terrain, dense forests, deserts, or disaster-stricken regions, the vehicle delivers exceptional performance while ensuring the safety of its crew. Its advanced suspension, reinforced armor, and intelligent navigation systems enable the Rangers to reach critical locations quickly and efficiently whenever humanity requires their assistance.
+        <br><br>
+        Powered by a next-generation clean quantum energy system and supervised by the Cragnon Command Nexus, the vehicle combines cutting-edge technology with reliable operational capability. It features autonomous driving assistance, secure communication links, emergency medical equipment, and advanced defensive protection, allowing the Rangers to respond confidently to missions without unnecessary delay. More than a high-performance vehicle, it represents the IDAI Power Rangers' unwavering commitment to rapid humanitarian response, technological excellence, and the protection of people around the world.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Dragon Zord</h3>
+
+    <center>
+        <img src="Dragon Zord.jpg">
+    </center>
+
+    <p>
+        The Dragon Zord is the supreme aerial Guardian Zord of the IDAI Power Rangers, designed for rapid deployment, long-range operations, and unmatched flight performance. Stationed within a specialized launch hangar beneath the IDAI Power Rangers Headquarters, it remains ready for immediate activation by the Cragnon Command Nexus. When deployed, the headquarters' massive armored roof automatically opens, allowing the Dragon Zord to soar into the sky and respond swiftly to missions across Earth and beyond.
+        <br><br>
+        Powered by an advanced Proxima Centauri quantum energy core, the Dragon Zord features intelligent flight systems, adaptive armor, powerful energy wings, and seamless communication with the Cragnon Super Quantum Computer. It serves as the command aerial platform of the ranger fleet and can synchronize with the six Guardian Zords to form the legendary Dragon Mega-Zord. As a symbol of unity, innovation, and guardianship, the Dragon Zord stands ready to protect humanity whenever its strength is called upon.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Dragon Mega-Zord</h3>
+
+    <center>
+        <img src="dragon.jpg">
+    </center>
+
+    <p>
+        The Dragon Mega-Zord is the ultimate guardian of the IDAI Power Rangers, formed by the perfect synchronization of all seven Guardian Zords under the guidance of the Cragnon Super Quantum Computer. Unlike a standard Mega-Zord, this extraordinary machine represents the highest level of technological achievement within the IDAI Universe, combining the unique strengths of the Red Panther, Blue Leopard, Pink Rhino, Gold Unicorn, Yellow Wolf, Grey Tank, and the legendary Dragon Zord into a single celestial defender. Designed for planetary, orbital, and interstellar operations, the Dragon Mega-Zord serves as the final line of protection whenever humanity faces challenges beyond the capabilities of the individual Guardian Zords.
+        <br><br>
+        Every component of the Dragon Mega-Zord is powered by an advanced Proxima Centauri quantum energy system, enabling limitless endurance, exceptional flight performance, adaptive combat intelligence, and seamless coordination across every operational environment. Its majestic dragon-inspired wings provide unparalleled maneuverability through Earth's atmosphere and the vastness of space, while its intelligent armor continuously adapts to changing mission requirements. Rather than symbolizing destruction, the Dragon Mega-Zord embodies unity, courage, innovation, and responsible guardianship. Standing as the most prestigious creation of the IDAI Power Rangers program, it reflects the belief that the greatest strength is achieved when every guardian works together to protect humanity, preserve peace, and inspire hope for future generations.
+    </p>
+</div>
+
+<div class="section">
+  <h2>Megazord: Supreme Fusion of Cosmic Power</h2>
+  <center>
+    <img src="IDAI Mega Zord.jpg">
+  </center>
+  <p>
+    The Megazord is the ultimate manifestation of the IDAI Power Rangers’ unity, forged when all six Zords converge into a single colossal warrior. Rising from the Morphex Tower, it embodies courage, wisdom, loyalty, compassion, brilliance, and resilience in one supreme form. The Red Panther forms the agile core, the Yellow Lioness provides the sturdy frame, the Blue Eagle spreads wings of foresight, the Pink Rhino anchors strength and balance, the Gold Unicorn crowns the fusion with radiant supremacy, and the Steel Tank fortifies the foundation with indestructible armor. At its chest glows the Lion Emblem, roaring with cosmic energy from Proxima Centauri, channeling protective waves across the battlefield. The Megazord wields the Atomic Beast Bluster, a weapon engraved with the Roaring Lion symbol, capable of unleashing devastating yet dignified power to safeguard humanity. More than a machine, it is a living symbol of unity, guardianship, and eternal supremacy, proving that legends never die under the banner of IDAI.
+  </p>
+
+  <h3>Megazord Star: Eternal Core of Supremacy</h3>
+  <center>
+    <img src="Mega zord star.jpg">
+  </center>
+  <p>
+    The Megazord Star is the supreme emblem of unity, forged from the fusion of all Zord Stars yet destined to resonate most powerfully with the Red Ranger, the team’s leader and symbol of courage. Radiating a crimson aura at its core, it embodies speed, vision, and the unyielding responsibility carried by the commander. Surrounding this fiery heart are blended rays of golden loyalty, azure wisdom, pink compassion, silver resilience, and supreme brilliance, all converging into one eternal burst of cosmic energy. The Roaring Lion emblem engraved at its center roars with power from Proxima Centauri, amplifying the Red Ranger’s leadership and channeling protective waves across the battlefield. More than a weapon, the Megazord Star is the living soul of the Atomic Beast Bluster, binding the Rangers to their oath: “The Responsibility We Bear Is Great.” It ensures that the Red Ranger leads not with dominance, but with dignity, guardianship, and eternal supremacy, proving that legends never die.
+  </p></div>
+
+<footer>
+	<p>© IDAI: Inspiring Trust Through Innovation. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IDAI Power Rangers - Headquarters and Infrastrustures</title>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>	
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🌐IDAI Power Rangers</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="tower.html">Headquarters</a></li>
+          <li class="nav-item"><a class="nav-link " href="members.html">Members</a> </li>
+          <li class="nav-item"><a class="nav-link" href="zords.html">Zords</a></li> 
+          <li class="nav-item"><a class="nav-link " href="super.html">Super Force</a></li>
+          <li class="nav-item"> <a class="nav-link special" href="Weapon.html">Weapons</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <center>
+    <h2>Special Weapons of the IDAI Power Rangers</h2>
+  </center>
+
+
+  <div class="section">
+  <h3>Atomic Beast Blaster: Supreme Cosmic Arsenal</h3>
+  <center>
+    <img src="Blaster.jpg">
+  </center>
+  <p>
+    The Atomic Beast Blaster is the ultimate weapon of the IDAI Power Rangers, forged in the Morphex Tower and infused with cosmic energy from Proxima Centauri. Unlike the Zords, it is not an animal form but a pure mechanical construct designed for precision and supremacy. Its design carries the Roaring Lion emblem at its core, symbolizing courage, honor, and eternal guardianship. Twin energy barrels channel concentrated cosmic fire, unleashing devastating blasts that can shatter enemy defenses while projecting protective waves to shield allies. The weapon harmonizes with the Megazord Star, amplifying its power and binding the Rangers to their oath: “The Responsibility We Bear Is Great.” When wielded by the Red Ranger, the Atomic Beast Blaster becomes the team’s supreme arsenal, embodying unity and transforming cosmic energy into light that safeguards humanity’s dignity. More than a weapon, it is a living symbol of IDAI’s supremacy, proving that legends never die.
+  </p></div>
+
+  <div class="section">
+  <h3>Cosmic Roar Blaster: Voice of the Lion Emblem</h3>
+  <center>
+    <img src="Cosmic Roar Blaster.jpg">
+  </center>
+  <p>
+    The Cosmic Roar Blaster is a supreme weapon of the IDAI Power Rangers, designed to channel the raw essence of the Roaring Lion emblem into devastating energy. Forged in the Morphex Tower and infused with cosmic fire from Proxima Centauri, it is sleek, angular, and radiant with crimson and golden light. At its core lies the Lion’s head motif, symbolizing courage and eternal supremacy, while its barrels unleash concentrated waves of sound and energy that echo like a lion’s roar across the battlefield. When fired, the blaster does not simply destroy—it resonates with protective vibrations, shielding allies and igniting hope in those who hear its roar. In the hands of the Red Ranger, the Cosmic Roar Blaster becomes the ultimate voice of leadership, amplifying his command and binding the team to their oath: “Protect Humanity, Honor IDAI, Legends Never Die.” More than a weapon, it is a living symbol of guardianship, proving that the roar of IDAI will echo eternally across the cosmos.
+  </p></div>
+
+  <div class="section">
+  <h3>Lion Flare Blaster: Flame of Eternal Supremacy</h3>
+  <center>
+    <img src="Lion flare Blaster.jpg">
+  </center>
+  <p>
+    The Lion Flare Blaster is one of the supreme weapons of the IDAI Power Rangers, forged in the Morphex Tower and engraved with the Roaring Lion symbol to embody courage, guardianship, and eternal supremacy. Designed with crimson and golden brilliance, it channels concentrated cosmic fire from Proxima Centauri into blazing bursts of energy that roar like a lion’s flame. Its dual barrels ignite with radiant light, unleashing scorching waves that can incinerate enemy defenses while illuminating the battlefield with protective brilliance. Each of the six Rangers can wield the Lion Flare Blaster, adapting its cosmic fire to their own essence—whether speed, loyalty, wisdom, compassion, resilience, or supremacy. When combined with the other special weapons, it merges into the Atomic Beast Bluster, the ultimate arsenal of unity. More than a weapon, the Lion Flare Blaster is a living flame of dignity, proving that the roar of IDAI will forever burn across the cosmos, safeguarding humanity and ensuring that legends never die.
+  </p></div>
+
+  <div class="section">
+  <h3>Roaring Cannon - Crimson Velocity</h3>
+  <center>
+    <img src="Roaring Cannon - Crimson Velocity.jpg">
+  </center>
+  <p>
+    The Roaring Cannon – Crimson Velocity is the ultimate long-range weapon of the IDAI Power Rangers, forged in the Morphex Tower and engraved with the blazing Roaring Lion emblem. Designed primarily for the Red Ranger, it channels concentrated cosmic fire from Proxima Centauri into a stream of crimson energy that moves with unmatched speed and precision. The cannon’s core glows with a radiant pulse, igniting bursts of flame-like velocity that tear through enemy defenses while leaving a trail of protective light across the battlefield. Its dual firing modes allow it to unleash rapid crimson blasts for agile combat or a single devastating beam that embodies the full roar of the Lion. More than a weapon, the Roaring Cannon is a symbol of leadership and guardianship, amplifying the Red Ranger’s command and binding the team to their eternal oath: “Protect Humanity, Honor IDAI, Legends Never Die.” It stands as the fiery spear of supremacy, proving that courage and unity can blaze across the cosmos forever.
+  </p></div>
+
+<div class="section">
+    <h3>Abyssal Harbinger – Legendary Power Sword</h3>
+
+    <center>
+        <img src="Abyssal Harbinger.jpg" alt="Abyssal Harbinger – Legendary Power Sword">
+    </center>
+
+    <p>
+        The Abyssal Harbinger is the legendary Power Sword of the IDAI Power Rangers, forged with dark alloy composites and infused with radiant quantum fire. Its blade channels immense energy through the lion-emblem core, releasing devastating strikes that combine precision, speed, and overwhelming force. Designed for both offense and defense, the Harbinger is capable of cutting through the strongest armor while shielding its wielder with radiant energy.<br><br>
+
+        More than a weapon, the Abyssal Harbinger symbolizes courage and guardianship. The fiery lion motif represents the eternal spirit of leadership and responsibility carried by the Rangers. Every strike of the Harbinger is a reminder of the Guardians of Humanity’s oath to protect peace, justice, and hope, ensuring that strength is always tempered by discipline and unity.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Bastion Nomad: Elegant Transport of the Guardians</h3>
+
+    <center>
+        <img src="Bastion Nomad.jfif" alt="Bastion Nomad: Elegant Transport of the Guardians">
+    </center>
+
+    <p>
+        The Bastion Nomad is a heavily armored transport system designed to carry Rangers safely through hostile environments. With its mine-resistant engineering, reinforced plating, and advanced suspension, the Nomad ensures resilience against ambushes and explosive threats while maintaining mobility across rugged terrain.<br><br>
+
+        More than a vehicle, the Bastion Nomad represents the Guardians’ commitment to protection and endurance. It is both a shield and a sanctuary, enabling the Power Rangers to move with confidence and elegance even in the most dangerous missions. Wherever the Rangers travel, the Bastion Nomad stands as a symbol of strength, safety, and unwavering responsibility.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Celestial Mirage: The Eye of the Guardians</h3>
+
+    <center>
+        <img src="Celestial Mirage.jpg" alt="Celestial Mirage: The Eye of the Guardians">
+    </center>
+
+    <p>
+        The Celestial Mirage is a hypersonic reconnaissance drone designed to patrol the skies and seas with unmatched precision. Its sleek dolphin-inspired frame, glowing energy conduits, and advanced sensor core allow it to glide silently above oceans and cities, gathering intelligence while remaining nearly invisible to hostile detection systems.<br><br>
+
+        More than a surveillance craft, the Celestial Mirage embodies the Guardians’ vision of vigilance and foresight. Known as the “Eye of the Guardians,” it symbolizes clarity, wisdom, and the promise of protection. Every mission it undertakes strengthens the Rangers’ ability to anticipate threats, safeguard humanity, and uphold the covenant of peace and justice across the IDAI Universe.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Phantom Serpent: Silent Fang of the Skies</h3>
+
+    <center>
+        <img src="Helicopter - Phantom Serpent.jpg" alt="Phantom Serpent: Silent Fang of the Skies">
+    </center>
+
+    <p>
+        The Phantom Serpent is a stealth tactical helicopter designed for covert operations and precision strikes. With its angular frame, advanced weapon systems, and glowing energy accents, it blends cutting-edge technology with lethal efficiency. Its stealth plating and adaptive flight systems allow it to penetrate hostile airspace undetected, delivering Rangers into the heart of critical missions.<br><br>
+
+        More than an aircraft, the Phantom Serpent embodies the Guardians’ mastery of silence and speed. Known as the “Silent Fang of the Skies,” it represents vigilance, precision, and the unseen power that protects humanity. Every mission flown by the Phantom Serpent reinforces the Rangers’ covenant: to defend peace and justice with discipline, courage, and unwavering resolve.
+    </p>
+</div>
+
+<div class="section">
+    <h3>IDAI Blue Phantom: Sovereign Wings of the Skies</h3>
+
+    <center>
+        <img src="Jet - IDAI Blue Phantom.jpg" alt="IDAI Blue Phantom: Sovereign Wings of the Skies">
+    </center>
+
+    <p>
+        The IDAI Blue Phantom is a next-generation air superiority jet built to dominate the skies with unmatched speed, agility, and precision. Its aerodynamic frame, twin-engine thrust, and glowing energy conduits allow it to soar above the clouds with breathtaking power. Designed for high-altitude combat and rapid deployment, the Phantom ensures aerial dominance in every mission.<br><br>
+
+        More than a fighter jet, the Blue Phantom symbolizes sovereignty and vigilance. Known as the “Sovereign Wings of the Skies,” it represents the Guardians’ unyielding watch over humanity. Every flight embodies courage, discipline, and the promise of protection, making the Phantom a living testament to the IDAI Power Rangers’ covenant of peace and justice.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Desert Revenant: Guardian Beast of the Sands</h3>
+
+    <center>
+        <img src="Desert Revenant.jpg" alt="Desert Revenant: Guardian Beast of the Sands">
+    </center>
+
+    <p>
+        The Desert Revenant is a formidable armored assault vehicle built to dominate the harshest desert landscapes. With its massive rugged tires, engraved metallic armor, and blazing energy headlights, it charges across dunes and rocky terrain with unstoppable force. Designed for speed, resilience, and intimidation, the Revenant ensures the Rangers can strike swiftly in unforgiving environments.<br><br>
+
+        More than a war machine, the Desert Revenant embodies the spirit of endurance and guardianship. Known as the “Guardian Beast of the Sands,” it symbolizes the Rangers’ ability to thrive where others falter. Every mission it undertakes reinforces the covenant of the Guardians of Humanity: to protect civilization with strength, precision, and unwavering resolve, even in the most desolate battlegrounds.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Apex Tactical: Colossus of Command</h3>
+
+    <center>
+        <img src="Apex Tactical.jfif" alt="Apex Tactical: Colossus of Command">
+    </center>
+
+    <p>
+        The Apex Tactical is a heavy military transport bus engineered to move Rangers and critical assets with unmatched strength and security. Its armored frame, multi-wheel design, and advanced defensive systems make it a fortress on wheels, capable of enduring hostile fire while maintaining stability across diverse terrains. Built for resilience and capacity, it ensures the Guardians can deploy entire squads into the heart of battle.<br><br>
+
+        More than a transport, the Apex Tactical embodies authority and unity. Known as the “Colossus of Command,” it symbolizes the Rangers’ ability to mobilize with discipline and precision. Every mission it undertakes reinforces the Guardians’ covenant: to protect humanity with power, order, and unwavering responsibility, ensuring that no force can break their line of defense.
+    </p>
+</div>
+
+
+<footer>
+	<p>© IDAI: Inspiring Trust Through Innovation. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
