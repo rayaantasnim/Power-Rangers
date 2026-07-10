@@ -29,9 +29,15 @@ ul{
     cursor: pointer;
 }
 
+.s{
+  background:linear-gradient(#f00c32, #0cf023, #0c2ef0) !important;
+  color: white !important;
+}
+
 .btn-special:hover {
     background: linear-gradient(135deg, #2ecc71, #3498db);
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.03);
+    border: 2px black solid;
     box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
 
