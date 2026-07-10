@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IDAI Power Rangers - Mighty Mega-Zords</title>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+a:hover {
+    background: linear-gradient(135deg, #2ecc71, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>	
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🌐IDAI Power Rangers</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="tower.html">Headquarters</a></li>
+          <li class="nav-item"><a class="nav-link " href="members.html">Members</a> </li>
+          <li class="nav-item"><a class="nav-link special" href="zords.html">Zords</a></li> 
+          <li class="nav-item"><a class="nav-link" href="super.html">Super Force</a></li>
+          <li class="nav-item"> <a class="nav-link" href="Weapon.html">Weapons</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav><br>
+
+<h2>IDAI Power Rangers Mighty Zords</h2>
+<center>
+	<img src="Super Mega Zord.jpg">
+</center><br>
+<p id="para">
+	The Mighty Special Single Zords are elite mission-specific guardian machines developed for extraordinary operations beyond the capabilities of the standard Ranger Zords. The Eagle Zord dominates the skies with unmatched reconnaissance and aerial superiority, while the Space UFO Zord conducts advanced orbital and deep-space missions. The Rabbit Zord excels in high-speed rescue and rapid deployment, the Gorilla Zord delivers overwhelming power during heavy assault operations, the Scorpion Zord specializes in desert combat and precision strikes, the Mighty Shark Zord protects oceans through advanced underwater warfare, and the Tiger Zord masters extreme off-road environments with exceptional agility, endurance, and unstoppable battlefield dominance.
+</p>
+
+<div class="section">
+    <h3>Dragon Mega-Zord</h3>
+
+    <center>
+        <img src="dragon.jpg">
+    </center>
+
+    <p>
+        The Dragon Mega-Zord is the ultimate guardian of the IDAI Power Rangers, formed by the perfect synchronization of all seven Guardian Zords under the guidance of the Cragnon Super Quantum Computer. Unlike a standard Mega-Zord, this extraordinary machine represents the highest level of technological achievement within the IDAI Universe, combining the unique strengths of the Red Panther, Blue Leopard, Pink Rhino, Gold Unicorn, Yellow Wolf, Grey Tank, and the legendary Dragon Zord into a single celestial defender. Designed for planetary, orbital, and interstellar operations, the Dragon Mega-Zord serves as the final line of protection whenever humanity faces challenges beyond the capabilities of the individual Guardian Zords.
+        <br><br>
+        Every component of the Dragon Mega-Zord is powered by an advanced Proxima Centauri quantum energy system, enabling limitless endurance, exceptional flight performance, adaptive combat intelligence, and seamless coordination across every operational environment. Its majestic dragon-inspired wings provide unparalleled maneuverability through Earth's atmosphere and the vastness of space, while its intelligent armor continuously adapts to changing mission requirements. Rather than symbolizing destruction, the Dragon Mega-Zord embodies unity, courage, innovation, and responsible guardianship. Standing as the most prestigious creation of the IDAI Power Rangers program, it reflects the belief that the greatest strength is achieved when every guardian works together to protect humanity, preserve peace, and inspire hope for future generations.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Eagle Mega-Zord</h3>
+
+    <center>
+        <img src="Eagle Mega-Zord.jpg" alt="Eagle Mega-Zord">
+    </center>
+
+    <p>
+        The Eagle Mega-Zord is the skyborne sentinel of the IDAI Power Rangers, forged through the perfect fusion of the six Guardian Zords with the legendary Eagle Zord. Unlike ordinary formations, this colossal machine embodies vigilance and freedom, combining the ferocity of the Red Panther, the agility of the Blue Leopard, the resilience of the Pink Rhino, the mystic power of the Gold Unicorn, the speed of the Yellow Flying Wolf, the unyielding defense of the Steel Tank, and the celestial wings of the Eagle Zord. Together, they create a guardian designed for atmospheric dominance, orbital defense, and interstellar missions.<br><br>
+
+        Powered by the Skyfire Quantum Energy Core, the Eagle Mega-Zord possesses limitless endurance, adaptive combat intelligence, and unparalleled aerial maneuverability. Its radiant wings, feathered with energy panels, allow it to soar through storms, pierce the stratosphere, and glide across the void of space. Armed with the Celestial Saber, it strikes with precision and majesty, a beacon of justice in every battle. More than a weapon, the Eagle Mega-Zord symbolizes unity, vigilance, and the eternal promise of guardianship. Standing as a luminous sentinel above the Nova Capital Province, it reminds humanity that the greatest strength of the IDAI Power Rangers lies not only in their power, but in their unyielding watch over peace and hope.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Space UFO Mega-Zord</h3>
+
+    <center>
+        <img src="Space UFO Mega-Zord.jpg" alt="Space UFO Mega-Zord">
+    </center>
+
+    <p>
+        The Space UFO Mega-Zord is the cosmic sentinel of the IDAI Power Rangers, formed by the unbreakable unity of the six Guardian Zords with the interstellar might of the UFO Zord. Unlike terrestrial formations, this colossal machine embodies the essence of infinity, combining the ferocity of the Red Panther, the agility of the Blue Leopard, the resilience of the Pink Rhino, the mystic power of the Gold Unicorn, the speed of the Yellow Flying Wolf, the unyielding defense of the Steel Tank, and the radiant disc of the UFO Zord. Together, they create a guardian designed for planetary defense, orbital missions, and deep-space exploration.<br><br>
+
+        Powered by the Quantum Nebula Reactor, the Space UFO Mega-Zord possesses limitless endurance, adaptive combat intelligence, and unparalleled interstellar mobility. Its luminous disc crown channels cosmic energy, allowing it to warp across dimensions, shield entire fleets, and strike with devastating precision. Armed with the Stellar Blade, it cuts through darkness like a beacon of hope. More than a weapon, the Space UFO Mega-Zord symbolizes transcendence, unity, and humanity’s eternal reach for the stars. Standing as a celestial guardian above the Nova Capital Province, it reminds all that the IDAI Power Rangers are not bound by Earth alone — they are protectors of peace across the galaxy.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Rabbit Mega-Zord</h3>
+
+    <center>
+        <img src="Rabbit Mega-zord.jpg" alt="Rabbit Mega-Zord">
+    </center>
+
+    <p>
+        The Rabbit Mega-Zord is the swift vanguard of the IDAI Power Rangers, born from the perfect fusion of the six Guardian Zords with the legendary Rabbit Zord. Unlike conventional formations, this colossal machine embodies speed, vigilance, and precision, combining the ferocity of the Red Panther, the agility of the Blue Leopard, the resilience of the Pink Rhino, the mystic power of the Gold Unicorn, the speed of the Yellow Flying Wolf, the unyielding defense of the Steel Tank, and the lightning reflexes of the Rabbit Zord. Together, they create a guardian designed for rapid deployment, tactical strikes, and battlefield agility.<br><br>
+
+        Powered by the Quantum Velocity Core, the Rabbit Mega-Zord possesses limitless endurance, adaptive combat intelligence, and unmatched acceleration. Its luminous circuits blaze across the battlefield, allowing it to outmaneuver enemies, strike with precision, and retreat with grace. Armed with the Swift Saber, it delivers rapid, decisive blows that overwhelm even the most formidable foes. More than a weapon, the Rabbit Mega-Zord symbolizes vigilance, resilience, and the eternal promise of guardianship. Standing as the fastest sentinel of the Nova Capital Province, it reminds humanity that the IDAI Power Rangers are always one step ahead, ready to defend peace with unstoppable speed.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Gorilla Mega-Zord</h3>
+
+    <center>
+        <img src="Gorilla Mega-Zord.jpg" alt="Gorilla Mega-Zord">
+    </center>
+
+    <p>
+        The Gorilla Mega-Zord is the earthbound titan of the IDAI Power Rangers, forged through the perfect fusion of the six Guardian Zords with the colossal Gorilla Zord. Unlike aerial or aquatic formations, this mighty machine embodies raw strength, resilience, and unyielding stability, combining the ferocity of the Red Panther, the agility of the Blue Leopard, the resilience of the Pink Rhino, the mystic power of the Gold Unicorn, the speed of the Yellow Flying Wolf, the unbreakable defense of the Steel Tank, and the towering might of the Gorilla Zord. Together, they create a guardian designed for terrestrial dominance, fortress defense, and ground-shattering combat.<br><br>
+
+        Powered by the Terra Quantum Core, the Gorilla Mega-Zord possesses limitless endurance, adaptive combat intelligence, and unmatched physical strength. Its colossal fists can shatter mountains, its armored frame withstands the heaviest assaults, and its roar echoes like thunder across the battlefield. Armed with the Titan Hammer, it delivers devastating blows that crush even the most formidable enemies. More than a weapon, the Gorilla Mega-Zord symbolizes resilience, courage, and the eternal promise of guardianship. Standing as the immovable sentinel of the Nova Capital Province, it reminds humanity that the IDAI Power Rangers are steadfast protectors, ready to defend peace with the might of the earth itself.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Scorpion Mega-Zord</h3>
+
+    <center>
+        <img src="Scorpion Mega-Zord.jpg" alt="Scorpion Mega-Zord">
+    </center>
+
+    <p>
+        The Scorpion Mega-Zord is the venomous protector of the IDAI Power Rangers, born from the perfect fusion of the six Guardian Zords with the legendary Scorpion Zord. Unlike aerial or terrestrial formations, this colossal machine embodies precision, vigilance, and retribution, combining the ferocity of the Red Panther, the agility of the Blue Leopard, the resilience of the Pink Rhino, the mystic power of the Gold Unicorn, the speed of the Yellow Flying Wolf, the unyielding defense of the Steel Tank, and the lethal stinger of the Scorpion Zord. Together, they create a guardian designed for subterranean missions, tactical ambushes, and decisive strikes.<br><br>
+
+        Powered by the Venom Core Reactor, the Scorpion Mega-Zord possesses limitless endurance, adaptive combat intelligence, and unmatched precision. Its glowing stinger arcs high above, humming with lethal energy, while its claws rend through the battlefield with unstoppable force. Armed with the Venom Saber, it delivers piercing blows that paralyze even the most formidable enemies. More than a weapon, the Scorpion Mega-Zord symbolizes vigilance, justice, and the eternal promise of guardianship. Standing as the silent sentinel of the Nova Capital Province, it reminds humanity that the IDAI Power Rangers are relentless defenders, ready to strike whenever peace is threatened.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Shark Mega-Zord</h3>
+
+    <center>
+        <img src="Shark Mega-Zord.jpg" alt="Shark Mega-Zord">
+    </center>
+
+    <p>
+        The Shark Mega-Zord is the abyssal titan of the IDAI Power Rangers, forged through the perfect fusion of the six Guardian Zords with the legendary Shark Zord. Unlike aerial or terrestrial formations, this colossal machine embodies vigilance, ferocity, and deep-sea dominance, combining the ferocity of the Red Panther, the agility of the Blue Leopard, the resilience of the Pink Rhino, the mystic power of the Gold Unicorn, the speed of the Yellow Flying Wolf, the unyielding defense of the Steel Tank, and the abyssal might of the Shark Zord. Together, they create a guardian designed for underwater combat, rescue operations, and oceanic defense.<br><br>
+
+        Powered by the Abyssal Quantum Core, the Shark Mega-Zord possesses limitless endurance, adaptive combat intelligence, and unmatched aquatic maneuverability. Its glowing fins slice through the depths, its sonar systems pierce the silence of the abyss, and its armored frame withstands crushing oceanic pressure. Armed with the Trident of Eternity, it delivers devastating strikes that echo through the deep. More than a weapon, the Shark Mega-Zord symbolizes vigilance, courage, and the eternal promise of guardianship. Standing as the sentinel of the oceans, it reminds humanity that the IDAI Power Rangers are protectors not only of land and sky, but of the boundless seas as well.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Tiger Mega-Zord</h3>
+
+    <center>
+        <img src="Tiger Mega Zord.jpg" alt="Tiger Mega-Zord">
+    </center>
+
+    <p>
+        The Tiger Mega-Zord is the predator of the eternal plains, forged through the perfect fusion of the six Guardian Zords with the feral might of the Tiger Zord. Unlike aerial or aquatic formations, this colossal machine embodies agility, ferocity, and dominance, combining the ferocity of the Red Panther, the agility of the Blue Leopard, the resilience of the Pink Rhino, the mystic power of the Gold Unicorn, the speed of the Yellow Flying Wolf, the unyielding defense of the Steel Tank, and the predatory instincts of the Tiger Zord. Together, they create a guardian designed for land supremacy, rapid strikes, and relentless pursuit.<br><br>
+
+        Powered by the Terra-Trac Quantum Core, the Tiger Mega-Zord possesses limitless endurance, adaptive combat intelligence, and unmatched speed across every terrain. Its claws rend through steel, its roar echoes across battlefields, and its luminous eyes pierce the shadows of war. Armed with the Plasma Fang Blades, it delivers devastating slashes that overwhelm even the most formidable foes. More than a weapon, the Tiger Mega-Zord symbolizes vigilance, courage, and the eternal promise of guardianship. Standing as the prowling sentinel of the Nova Capital Province, it reminds humanity that the IDAI Power Rangers are relentless hunters of justice, ready to defend peace with claws of destiny.
+    </p>
+</div>
+
+
+<footer>
+	<p>© IDAI: Inspiring Trust Through Innovation. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

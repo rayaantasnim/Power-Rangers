@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IDAI Power Rangers - Mighty Zords</title>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+a:hover {
+    background: linear-gradient(135deg, #2ecc71, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>	
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🌐IDAI Power Rangers</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="tower.html">Headquarters</a></li>
+          <li class="nav-item"><a class="nav-link " href="members.html">Members</a> </li>
+          <li class="nav-item"><a class="nav-link special" href="zords.html">Zords</a></li> 
+          <li class="nav-item"><a class="nav-link" href="super.html">Super Force</a></li>
+          <li class="nav-item"> <a class="nav-link" href="Weapon.html">Weapons</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav><br>
+
+<h2>IDAI Power Rangers Mighty Zords</h2>
+<center>
+	<img src="Mighty Zord.jpg">
+</center><br>
+<p id="para">
+    In the colossal hangars of the Power Rangers Headquarters at Nova Capital Province, the Zords of the IDAI Universe stand as eternal guardians — each alive with power, spirit, and destiny. The Eagle Zord spreads its Wings of Eternity, the Space UFO Zord hums with the heartbeat of infinity, the Rabbit Zord crouches with swift vigilance, and the Gorilla Zord towers as a Titan of unyielding strength. The Scorpion Zord waits in silence with its venomous stinger, the Shark Zord prowls the abyss with feral majesty, and the Tiger Zord stalks the plains with claws of destiny. Yet above them all, the Dragon Zord coils with celestial fire, its scales shimmering like molten stars, embodying the Rangers’ ultimate force of rebirth and transcendence. Together, these Zords are not mere machines but living legends — embodiments of courage, unity, and justice. Always ready to move, always prepared to strike, they remind humanity that the Guardians of IDAI are eternal, and their covenant of peace will never falter.
+</p>
+
+<div class="section">
+    <h3>Dragon Zord</h3>
+
+    <center>
+        <img src="Dragon Zord.jpg">
+    </center>
+
+    <p>
+        The Dragon Zord is the supreme aerial Guardian Zord of the IDAI Power Rangers, designed for rapid deployment, long-range operations, and unmatched flight performance. Stationed within a specialized launch hangar beneath the IDAI Power Rangers Headquarters, it remains ready for immediate activation by the Cragnon Command Nexus. When deployed, the headquarters' massive armored roof automatically opens, allowing the Dragon Zord to soar into the sky and respond swiftly to missions across Earth and beyond.
+        <br><br>
+        Powered by an advanced Proxima Centauri quantum energy core, the Dragon Zord features intelligent flight systems, adaptive armor, powerful energy wings, and seamless communication with the Cragnon Super Quantum Computer. It serves as the command aerial platform of the ranger fleet and can synchronize with the six Guardian Zords to form the legendary Dragon Mega-Zord. As a symbol of unity, innovation, and guardianship, the Dragon Zord stands ready to protect humanity whenever its strength is called upon.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Eagle Zord: Wings of Eternity</h3>
+
+    <center>
+        <img src="Eagle Zord.jpg" alt="Eagle Zord: Wings of Eternity">
+    </center>
+
+    <p>
+        Inside the colossal hangar of the Power Rangers Headquarters at Nova Capital Province, the Eagle Zord stands with its wings spread wide, a mechanical marvel shimmering in blue, gold, and silver. Its frame hums with latent energy, every joint and panel alive with anticipation, as if the guardian itself longs to take flight. Engineers move beneath its towering presence, but even they pause, awed by the sheer majesty of this creation — a sentinel forged not only of steel, but of spirit.<br><br>
+
+        The Eagle Zord is more than a machine; it is the embodiment of vision and freedom. Known as the “Wings of Eternity,” it represents the Rangers’ ability to rise above despair and carry humanity toward hope. When summoned, its cry echoes across the skies, reminding all who hear it that the Guardians of Humanity are never grounded, never broken — always ready to soar into battle and shield the world with courage and unity.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Space UFO Zord: Cosmic Sentinel of Infinity</h3>
+
+    <center>
+        <img src="Space UFO Zord.jpg" alt="Space UFO Zord: Cosmic Sentinel of Infinity">
+    </center>
+
+    <p>
+        Within the vast hangar of the Power Rangers Headquarters at Nova Capital Province, the Space UFO Zord rests like a slumbering titan of the cosmos. Its disc-shaped frame gleams with blue and golden light, every panel etched with secrets of interstellar engineering. The hum of its energy core reverberates through the chamber, a sound that feels less like machinery and more like the heartbeat of the universe itself. Technicians move with reverence, for they know this Zord is not merely built — it is awakened.<br><br>
+
+        The Space UFO Zord is more than a weapon; it is the embodiment of infinity and guardianship. Known as the “Cosmic Sentinel of Infinity,” it represents the Rangers’ ability to transcend boundaries, to protect not only the Earth but the stars themselves. When summoned, its radiant glow pierces the heavens, reminding all who witness it that the Guardians of Humanity are eternal — defenders of peace across every horizon, from the skies above Nova Capital to the farthest reaches of the galaxy.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Rabbit Zord: Swift Spirit of the Guardians</h3>
+
+    <center>
+        <img src="Rabbit Zord.jpg" alt="Rabbit Zord: Swift Spirit of the Guardians">
+    </center>
+
+    <p>
+        In the gleaming hangar of the Power Rangers Headquarters at Nova Capital Province, the Rabbit Zord crouches like a living legend of speed and agility. Its white, gold, and blue frame pulses with radiant energy, glowing circuits tracing across its body like veins of light. Engineers and guardians alike pause when they pass by, for the Rabbit Zord radiates a presence that feels less mechanical and more alive — a sentinel waiting to leap into battle at the call of the Rangers.<br><br>
+
+        The Rabbit Zord is more than a machine; it is the embodiment of swiftness, vigilance, and resilience. Known as the “Swift Spirit of the Guardians,” it represents the Rangers’ ability to strike with precision and retreat with grace, always one step ahead of danger. When summoned, its luminous eyes blaze across the battlefield, reminding all who witness it that the Guardians of Humanity are ever-ready, ever-moving, and unstoppable in their pursuit of peace and justice.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Gorilla Zord: Titan of Unyielding Strength</h3>
+
+    <center>
+        <img src="Gorilla Zord.jpg" alt="Gorilla Zord: Titan of Unyielding Strength">
+    </center>
+
+    <p>
+        In the immense hangar of the Power Rangers Headquarters at Nova Capital Province, the Gorilla Zord towers like a living monument of raw power. Its silver and gold armor gleams beneath the radiant lights, while blue energy pulses through its veins, illuminating the chamber with an aura of unstoppable force. Every movement of its colossal frame sends a shiver through the steel floors, as if the very earth acknowledges its presence. Technicians and guardians alike stand in reverence, for the Gorilla Zord is not simply a machine — it is a titan waiting to be unleashed.<br><br>
+
+        The Gorilla Zord embodies resilience, courage, and the indomitable will of the Guardians. Known as the “Titan of Unyielding Strength,” it represents the Rangers’ ability to stand firm against overwhelming odds, to shield humanity with unbreakable resolve. When summoned, its roar echoes like thunder across the battlefield, reminding all who witness it that the Guardians of Humanity are immovable, unshaken, and forever ready to defend peace with the might of a titan.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Scorpion Zord: Venom of the Eternal Guardians</h3>
+
+    <center>
+        <img src="Scorpion Zord.jpg" alt="Scorpion Zord: Venom of the Eternal Guardians">
+    </center>
+
+    <p>
+        In the vast hangar of the Power Rangers Headquarters at Nova Capital Province, the Scorpion Zord crouches in silence, its golden claws gleaming under the radiant lights. Blue energy pulses through its armored frame, illuminating the chamber with an aura of danger and precision. Its tail, crowned with a luminous stinger, arcs high above, humming with lethal power — a reminder that this guardian strikes with both speed and inevitability. Engineers tread carefully around it, for even dormant, the Scorpion Zord radiates a presence that commands respect and awe.<br><br>
+
+        The Scorpion Zord is more than a machine; it is the embodiment of vigilance, precision, and retribution. Known as the “Venom of the Eternal Guardians,” it represents the Rangers’ ability to strike decisively against threats that endanger humanity. When summoned, its claws rend through darkness and its stinger pierces despair, reminding all who witness it that the Guardians of Humanity are relentless, unyielding, and forever ready to defend peace with the sting of justice.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Shark Zord: Abyssal Fang of the Guardians</h3>
+
+    <center>
+        <img src="Shark Zord.jpg" alt="Shark Zord: Abyssal Fang of the Guardians">
+    </center>
+
+    <p>
+        Deep within the underwater hangar of the Power Rangers Headquarters at Nova Capital Province, the Shark Zord glides silently through its chamber, a leviathan forged of steel and light. Its blue and silver armor gleams like ocean waves under moonlight, while golden accents crown its fins with regal brilliance. The hum of its sonar systems reverberates through the water, a pulse that feels less like machinery and more like the heartbeat of the abyss itself. Even dormant, its presence commands awe — a predator waiting for the call of the Guardians.<br><br>
+
+        The Shark Zord is more than a machine; it is the embodiment of vigilance, ferocity, and protection. Known as the “Abyssal Fang of the Guardians,” it represents the Rangers’ ability to strike from the depths, to defend humanity where danger lurks unseen. When summoned, its roar echoes through the oceans, reminding all who witness it that the Guardians of Humanity are eternal — defenders of peace across land, sky, and sea, forever ready to unleash justice from the abyss.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Tiger Zord: Predator of the Eternal Plains</h3>
+
+    <center>
+        <img src="Tiger Zord.jpg" alt="Tiger Zord: Predator of the Eternal Plains">
+    </center>
+
+    <p>
+        In Bay 07 of the Power Rangers Headquarters at Nova Capital Province, the Tiger Zord prowls with silent menace, its yellow and black armor gleaming under the floodlights. Blue energy burns in its eyes, a gaze that pierces through steel and shadow alike. Every muscle of its mechanical frame hums with restrained fury, its claws poised to rend through any obstacle. The hangar trembles with anticipation, for the Tiger Zord is not simply stationed — it is waiting, alive, and ready to strike.<br><br>
+
+        The Tiger Zord is more than a war machine; it is the embodiment of ferocity, speed, and dominance. Known as the “Predator of the Eternal Plains,” it represents the Rangers’ ability to adapt, to hunt, and to conquer even the most unforgiving terrains. When summoned, its roar reverberates across the battlefield, reminding all who witness it that the Guardians of Humanity are relentless hunters of justice, forever ready to defend peace with the claws of destiny.
+    </p>
+</div>
+
+
+
+<center>
+  <a href="Mega-Zords.html" class="btn-special">Explore the special Mega-zords</a>
+</center><br><br>
+
+<footer>
+	<p>© IDAI: Inspiring Trust Through Innovation. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

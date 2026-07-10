@@ -15,6 +15,26 @@ ul{
   }
 }
 
+.btn-special {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: whitesmoke !important;
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.btn-special:hover {
+    background: linear-gradient(135deg, #2ecc71, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
 .section {
   border-top: none !important;
   background: linear-gradient(145deg, #ffffff, #f2f6ff);
